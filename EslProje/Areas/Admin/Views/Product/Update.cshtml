@@ -1,0 +1,31 @@
+﻿@using EslProje.Models;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model Product
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+
+            <form class="forms-sample" method="post" >
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name"  class="form-control" placeholder="Product Name">
+                    <span class="text text-danger" asp-validation-for="Name"></span>
+
+
+                     <label asp-for="Price"></label>
+                    <input asp-for="Price"  class="form-control" placeholder="Product Price">
+                    <span class="text text-danger" asp-validation-for="Price"></span>
+
+                     <label asp-for="ImagePath"></label>
+                    <input asp-for="ImagePath"  class="form-control" placeholder="ImagePath">
+                    <span class="text text-danger" asp-validation-for="ImagePath"></span>
+                </div>
+                <button type="submit" class="btn btn-primary me-2 text-light">Submit</button>
+                <button class="btn btn-light" asp-action="Index">Go back</button>
+
+            </form>
+        </div>
+    </div>
+</div>
